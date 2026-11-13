@@ -13,7 +13,7 @@
 
 | Platform | Link |
 |---|---|
-| **Android APK** | [⬇️ Download Latest Release](https://github.com/rahaman1711/pooja-coconut-scan-ai/releases/latest) |
+| **Android APK** | [⬇️ Download Latest Release](https://github.com/rahaman1721/pooja-coconut-scan-ai/releases/latest) |
 | **Admin Console** | [🌐 Live Web Dashboard](https://temporary-rapid-timpani-kicvzzs.vercel.app) |
 
 > Status: Under Play Store / App Store review.
@@ -154,5 +154,5 @@ As **Lead Mobile & Frontend Engineer**:
 
 **Obaidhur Rahaman**
 Portfolio: [rahaman1721.framer.website](https://rahaman1721.framer.website)
-GitHub: [@rahaman1711](https://github.com/rahaman1711)
+GitHub: [@rahaman1721](https://github.com/rahaman1721)
 LinkedIn: [obaidhur-rahaman-1721z](https://www.linkedin.com/in/obaidhur-rahaman-1721z)
