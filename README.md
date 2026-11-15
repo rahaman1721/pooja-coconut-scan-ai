@@ -79,42 +79,58 @@
 
 ---
 
-## 🏗️ High-Level System Architecture
+## 🏗️ System Architecture & Data Flow
 
-```
-┌───────────────────────────────────────────────────────────────────┐
-│                     POOJA COCONUT SCAN AI                         │
-└───────────────────────────────────────────────────────────────────┘
+Pooja Coconut Scan AI is engineered with a **hybrid edge-cloud architecture**, decoupling latency-critical on-farm computer vision inference from the centralized B2B marketplace and administrative audit layer.
 
-   ┌────────────────────┐         ┌─────────────────────────────────┐
-   │  Android / iOS     │         │     AWS Cloud (Amplify Gen 2)   │
-   │  Mobile App        │  HTTPS  │                                 │
-   │                    │◄───────►│  ┌──────────┐  ┌────────────┐  │
-   │  ┌──────────────┐  │         │  │ AppSync  │  │  Cognito   │  │
-   │  │ TFLite AI    │  │         │  │ GraphQL  │  │ Auth Pools │  │
-   │  │ Engine       │  │         │  └────┬─────┘  └────────────┘  │
-   │  └──────────────┘  │         │       │                        │
-   │  ┌──────────────┐  │         │  ┌────▼─────┐  ┌────────────┐ │
-   │  │ Offline      │  │         │  │ DynamoDB │  │ Amazon S3  │ │
-   │  │ Scan Queue   │  │         │  │ Store    │  │ Image Store│ │
-   │  └──────────────┘  │         │  └──────────┘  └────────────┘ │
-   │  ┌──────────────┐  │         │                                │
-   │  │ Payment Flow │  │         │  ┌──────────────────────────┐  │
-   │  └──────────────┘  │         │  │   Payment Processing     │  │
-   │  ┌──────────────┐  │         │  └──────────────────────────┘  │
-   │  │ Order Mgmt   │  │         └─────────────────────────────────┘
-   │  └──────────────┘  │
-   └────────┬───────────┘
-            │ Capacitor Bridge
-            │
-   ┌────────▼───────────┐         ┌─────────────────────────────────┐
-   │  React 19 UI Layer │         │   Admin Web Console             │
-   │  (Vite PWA)        │         │   React 19 + Vercel             │
-   └────────────────────┘         │   Scan Reports | User Map       │
-                                  │   Quality Moderation | Analytics│
-                                  │   User Management | Orders      │
-                                  └─────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph EdgeDevice ["📱 Mobile Field Device (Farmer / Field Inspector)"]
+        CamCapture["Live Camera / Capacitor Bridge"]
+        TFLite["On-Device TensorFlow Lite Model (Quantized INT8)"]
+        QualityClassifier{"Inference Engine: Good / Damaged / Reject"}
+        OfflineQueue["Offline Transaction & Scan Queue (LocalStorage)"]
+    end
+
+    subgraph AWSCloud ["☁️ AWS Amplify Gen 2 Cloud Backend"]
+        Cognito["Amazon Cognito (Farmer / Buyer / Admin RBAC)"]
+        AppSync["AWS AppSync GraphQL API (Real-Time Subscriptions)"]
+        DynamoDB[("Amazon DynamoDB (Listings, Orders, Audit Ledger)")]
+        S3Storage[("Amazon S3 (Encrypted High-Res Evidence Images)")]
+    end
+
+    subgraph EnterpriseClients ["💻 Enterprise Admin & Buyer Portals"]
+        AdminDashboard["React 19 Admin Web Console (Vercel Deployed)"]
+        GeoMap["Live Geographic Active Farmer/Buyer Map"]
+        QualityAudit["Quality Moderation & Grade Override Engine"]
+        B2BMarketplace["B2B Order Routing & Payment Gateway"]
+    end
+
+    CamCapture -->|Raw Frame Buffer| TFLite
+    TFLite --> QualityClassifier
+    QualityClassifier -->|Instant Grade (<150ms, Zero Internet)| OfflineQueue
+    
+    OfflineQueue <-->|Auto-Sync on Connectivity| AppSync
+    OfflineQueue -->|Signed URL Upload| S3Storage
+    
+    AppSync <--> Cognito
+    AppSync <--> DynamoDB
+    
+    AppSync <-->|GraphQL Subscriptions (wss://)| AdminDashboard & B2BMarketplace
+    AdminDashboard --> QualityAudit & GeoMap
+    B2BMarketplace -->|Order Settlement| DynamoDB
 ```
+
+### 🔬 Edge-Cloud Data Flow Breakdown
+
+1. **Zero-Latency Agricultural Inference**:
+   - Rural coconut groves in South India frequently suffer from intermittent or non-existent 4G/5G mobile connectivity.
+   - The TensorFlow Lite quantized computer vision model runs 100% locally on Android/iOS CPU/GPU delegates via Capacitor, outputting real-time classifications (`Good`, `Damaged`, `Reject`) in under 150ms.
+2. **Resilient Offline Sync Pipeline**:
+   - Classification payloads, timestamps, and geolocation tags are queued locally. When network connectivity is re-established, the AWS Amplify Gen 2 client synchronizes mutations via AWS AppSync GraphQL.
+3. **Real-Time B2B Marketplace & Administrative Audit**:
+   - Verified coconut lots are published to the B2B marketplace where verified buyers can place orders against verified grades.
+   - Enterprise administrators audit grading accuracy through the React 19 web console, with full authority to approve, flag, or adjust grade thresholds dynamically.
 
 ---
 
