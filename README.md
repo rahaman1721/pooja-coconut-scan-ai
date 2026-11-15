@@ -126,6 +126,9 @@ flowchart TD
 ### 1. 📸 High-Resolution Computer Vision (Static Image Mode)
 - **Model Topology**: Custom MobileNetV3-Large architecture, transfer-learned on agricultural datasets and converted via TensorFlow Lite post-training integer quantization (PTQ INT8).
 - **Inference Speed**: ~85ms on mid-range Android processors (Snapdragon 680 / MediaTek Helio G88).
+- **Smart On-Device Image Compression Engine**:
+  - High-resolution raw camera frames (typically 5MB–15MB from 12MP/48MP smartphone sensors) are **automatically compressed on-device to $<120\text{ KB}$** using adaptive WebP/JPEG quantization and bilinear scaling before inference.
+  - Preserves critical high-frequency gradient edges required to detect micro-cracks and fungal mycelium while keeping local app storage ultra-compact (under 50MB for thousands of scans).
 - **Inspection Targets**:
   - **Shell Integrity**: Sub-millimeter stress cracks, mechanical damage incurred during dehusking.
   - **Fungal Pathogen Screening**: Automated segmentation of white/black mold (*Aspergillus niger*, *Fusarium*) around the soft germination eye.
