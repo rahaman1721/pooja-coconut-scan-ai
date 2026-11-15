@@ -108,17 +108,17 @@ flowchart TD
 
     CamCapture -->|Raw Frame Buffer| TFLite
     TFLite --> QualityClassifier
-    QualityClassifier -->|Instant Grade (<150ms, Zero Internet)| OfflineQueue
+    QualityClassifier -->|"Instant Grade (Sub-150ms, Zero Internet)"| OfflineQueue
     
-    OfflineQueue <-->|Auto-Sync on Connectivity| AppSync
-    OfflineQueue -->|Signed URL Upload| S3Storage
+    OfflineQueue <-->|"Auto-Sync on Connectivity"| AppSync
+    OfflineQueue -->|"Signed URL Upload"| S3Storage
     
     AppSync <--> Cognito
     AppSync <--> DynamoDB
     
-    AppSync <-->|GraphQL Subscriptions (wss://)| AdminDashboard & B2BMarketplace
+    AppSync <-->|"GraphQL Real-Time Subscriptions"| AdminDashboard & B2BMarketplace
     AdminDashboard --> QualityAudit & GeoMap
-    B2BMarketplace -->|Order Settlement| DynamoDB
+    B2BMarketplace -->|"Order Settlement"| DynamoDB
 ```
 
 ### 🔬 Edge-Cloud Data Flow Breakdown
