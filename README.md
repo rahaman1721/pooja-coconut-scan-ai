@@ -343,7 +343,18 @@ npx cap open android
 ```
 
 ---
+---
+
+## 👨‍💻 Author
+
+**Obaidhur Rahaman**  
+Full Stack Developer & Lead UI/UX Designer  
+
+- 🌐 **Portfolio**: [https://rahaman1721.framer.website](https://rahaman1721.framer.website)  
+- 🐙 **GitHub**: [@rahaman1721](https://github.com/rahaman1721)  
+- 💼 **LinkedIn**: [linkedin.com/in/obaidhur-rahaman-1721z](https://www.linkedin.com/in/obaidhur-rahaman-1721z)  
+- 📧 **Email**: [rahaman171920@gmail.com](mailto:rahaman171920@gmail.com)  
 
 <div align="center">
-  <sub>Pioneering multimodal edge AI for agricultural empowerment · Designed & Built by <a href="https://rahaman1721.framer.website">Obaidhur Rahaman</a> © 2026</sub>
+  <sub>Designed & Developed with precision by Obaidhur Rahaman © 2026</sub>
 </div>
