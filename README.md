@@ -2,27 +2,23 @@
 
 <div align="center">
 
-### **Industrial On-Device Multimodal AI (Image • Video • Acoustic Audio), Privacy-by-Design Architecture & 7-Day Escrow B2B Marketplace**
+### **Industrial On-Device Multimodal AI (Vision • Video • Acoustic Audio), 100% Offline Inference, Zero-Barrier Guest Scanning & 7-Day Escrow B2B Marketplace**
 
 [![React 19](https://img.shields.io/badge/Frontend-React_19_%2B_Vite-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
-[![AI Engine](https://img.shields.io/badge/Edge_AI-Multimodal_TensorFlow_Lite-FF6F00?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/lite)
 [![Mobile Runtime](https://img.shields.io/badge/Mobile-Capacitor_Android%2FiOS-119EFF?style=for-the-badge&logo=capacitor)](https://capacitorjs.com/)
+[![AI Engine](https://img.shields.io/badge/Edge_AI-TensorFlow_Lite_INT8-FF6F00?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/lite)
 [![Cloud Backend](https://img.shields.io/badge/Cloud-AWS_Amplify_Gen_2-FF9900?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com/amplify/)
-[![Privacy First](https://img.shields.io/badge/Privacy-Report--Only_Sync-success?style=for-the-badge)]()
-[![Escrow](https://img.shields.io/badge/Escrow-7--Day_Payment_Hold-blue?style=for-the-badge)]()
-[![Freemium](https://img.shields.io/badge/Onboarding-20_Free_Scans-green?style=for-the-badge)]()
+[![GraphQL](https://img.shields.io/badge/API-AWS_AppSync_GraphQL-E10098?style=for-the-badge&logo=graphql)](https://aws.amazon.com/appsync/)
+[![Database](https://img.shields.io/badge/Database-Amazon_DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb)](https://aws.amazon.com/dynamodb/)
+[![Privacy](https://img.shields.io/badge/Privacy-Report--Only_Cloud_Sync-success?style=for-the-badge)]()
+[![Escrow](https://img.shields.io/badge/Fintech-7--Day_Escrow_Hold-blue?style=for-the-badge)]()
 
 <br/>
 
 Architected & Engineered by **[Obaidhur Rahaman](https://rahaman1721.framer.website)** · Full Stack Developer & UI/UX Designer  
-*Pioneering Edge AI computer vision, continuous video conveyor sorting, and acoustic resonance spectrometry for agricultural grading in rural South India.*
+*Transforming the multi-billion dollar South Indian coconut supply chain via edge computing, acoustic spectrometry, and unforgeable digital certificates.*
 
 </div>
-
----
-
-> [!NOTE]  
-> **Flagship Enterprise Deep-Tech Notice:** This repository documents the comprehensive architectural blueprints, multimodal dataset engineering, privacy enclaves, and escrow fintech mechanisms of Pooja Coconut Scan AI. In compliance with client non-disclosure standards and intellectual property protections, proprietary trained model weights (`.tflite`), raw acoustic spectrometry audio datasets, and production cloud secrets are withheld. The production-verified Android APK is available under Releases.
 
 ---
 
@@ -35,267 +31,319 @@ Architected & Engineered by **[Obaidhur Rahaman](https://rahaman1721.framer.webs
 
 ---
 
-## 📌 Executive Summary & Industry Impact
+## 1. Project Title, Badges & Vision
 
-The coconut supply chain across South India (Pollachi, Kangeyam, Thanjavur, Madurai) handles tens of millions of nuts daily across smallholder plantations, wholesale mandis, copra drying yards, and commercial oil extraction mills. 
+### 🌾 The Vision: Standardizing Agricultural Quality at the Edge
+The coconut supply chain across South India (Pollachi, Kangeyam, Thanjavur, Madurai) trades millions of nuts daily across smallholder groves, wholesale mandis, copra drying yards, and commercial oil extraction mills. Historically, the industry suffered from three critical systemic failures:
+1. **Subjective Human Grading & Visual Errors:** Manual sorters miss hairline shell micro-fractures and microscopic *Aspergillus niger* fungal spore colonies around the soft germination eye.
+2. **Destructive Water & Kernel Guesswork:** Estimating water volume and copra thickness traditionally required destructive cracking of sample nuts or unreliable manual knuckle-tapping.
+3. **Severe Payment Risk & Exploitation:** Farmers faced arbitrary post-delivery rejections, delayed payments, and unilateral price deductions after dispatches arrived at destination warehouses.
 
-Historically, quality assessment relied on **subjective manual human inspection**:
-1. **Visual Flaws Missed**: Hairline shell fractures, microscopic fungal rot (*Aspergillus niger*), and calyx rot went undetected during high-speed manual sorting.
-2. **Destructive or Guesswork Water Content Testing**: Buyers had to manually shake or crack open random sample nuts to estimate kernel thickness and internal water volume.
-3. **Payment Insecurity & Middleman Exploitation**: Farmers faced post-delivery rejections, delayed payments, and arbitrary price deductions once shipments reached wholesale hubs.
-
-**Pooja Coconut Scan AI** transforms this multi-billion dollar agricultural supply chain by placing a **multimodal AI laboratory in every farmer's and field inspector's pocket**. Operating **100% offline without cellular coverage**, the application analyzes **Images**, **Live High-Speed Video Streams**, and **Acoustic Audio Resonance** to provide instant, unforgeable quality ratings backed by an automated **7-Day Escrow Payment Hold**.
+**Pooja Coconut Scan AI** solves this through a **multimodal on-device edge AI platform**. Operating **100% offline without cellular coverage**, it processes **High-Res Images**, **30fps Continuous Conveyor Video**, and **Acoustic Audio Tapping Resonance** to generate instant cryptographic quality certificates backed by a **7-Day Escrow Payment Hold**.
 
 ---
 
-## 🏗️ High-Tech System Architecture & Data Flow
+## 2. Exhaustive Module & Feature Breakdown
 
-The platform is architected around an **edge-first multimodal pipeline** connected to an event-driven AWS serverless cloud for reporting, escrow settlement, and dispute resolution.
+### 📸 Module A: Multimodal AI Scanning Engine (100% Offline)
+- **High-Res Computer Vision (Static Image Mode)**:
+  - Custom-trained MobileNetV3-Large INT8 quantized neural network executing via Android NNAPI / GPU delegates.
+  - Sub-millimeter shell fracture detection and dehusked mechanical stress damage identification.
+  - Surface pathogen segmentation identifying white/black mold (*Aspergillus*, *Fusarium*) around the calyx eye.
+  - Automated dimensional classification estimating diameter, circumference, and grade category (Grade A Export, Grade B Domestic, Reject).
+  - Adaptive on-device image compression scaling raw 12MP/48MP camera frames down to $<120\text{ KB}$ WebP/JPEG formats, preserving high-frequency edges while conserving local storage.
+- **Continuous Conveyor Video Stream (Sorting Bay Mode)**:
+  - Real-time 30fps lightweight SSD-MobileNet object tracking designed for wholesale packing facilities and conveyor sorting tables.
+  - Automated batch throughput counter (up to 140 nuts/minute) tracking cumulative Grade A, B, and Reject tallies.
+  - Visual color-coded bounding boxes with automated audio alert triggers upon reject identification.
+- **Acoustic Audio Resonance Spectrometry (Tapping Mode)**:
+  - Standardizes traditional knuckle-tapping by capturing 1.5-second acoustic impact audio through the mobile microphone.
+  - On-device Fast Fourier Transform (FFT) generating a 128-band Mel-frequency spectrogram.
+  - 1D-CNN classifies fundamental resonant pitch ($f_0$) and decay damping constant ($\tau$):
+    - **450–600 Hz (High Resonant Ring):** Dense, fully water-filled cavity with high turgor pressure.
+    - **$<300\text{ Hz}$ (Dull Low Thud):** Desiccated, empty, or spoiled internal copra without cracking the shell.
+- **Multimodal Confidence Fusion**: Combines visual, video, and acoustic probability scores into an aggregate certified quality rating in under 120ms.
+
+### ⚡ Module B: Zero-Barrier Guest Mode & Onboarding
+- **Zero-Login Instant Scanning**: Anyone can download the app and immediately scan produce without entering a phone number, email, or waiting for an SMS OTP.
+- **20 Free Trial Scans**: Guest devices receive 20 complimentary full multimodal scans stored locally in SQLite.
+- **Decoupled Architecture**: Users seeking a pure diagnostic scanner can utilize the application indefinitely without engaging with the commercial marketplace.
+- **Hardware Permission Management**: Transparent, context-aware permission requests for Camera2 API, AudioRecord, and Native Storage.
+
+### 🔒 Module C: Privacy-by-Design & Report-Only Cloud Sync
+- **Device-Only Sandboxed Media Vault**: Raw camera photographs, video feeds, and microphone audio recordings **NEVER leave the mobile device**.
+- **Bandwidth-Conservative Metadata Sync**: Only lightweight JSON audit certificates are synced to AWS DynamoDB:
+  - `scanId`, `timestamp`, `compositeGrade`, `defectConfidence`, `acousticResonanceHz`, `waterVolumeEstimate`, `geoHash`, and local SHA-256 image hashes.
+- **Dispute-Only Evidence Verification**: Raw compressed images remain isolated locally, uploaded via pre-signed S3 URLs only if a formal buyer dispute is triggered.
+
+### 🛒 Module D: B2B Agricultural Marketplace
+- **Seller Batch Publishing**: 1-Click creation of wholesale lots directly from certified scan reports, specifying volume (nut count or metric tonnes), location, and base price.
+- **Interactive Price Bargaining & Counter-Offers**: `BuyerBargainPage.jsx` and `SellerNegotiation.jsx` facilitate real-time offer negotiations with counter-proposal limits.
+- **Direct Real-Time Messaging**: In-app buyer-seller chat (`BuyerChat.jsx`, `SellerChat.jsx`) for logistics coordination and vehicle dispatch timing.
+- **Live Mandi Benchmark Indexing**: Real-time agricultural commodity prices across Pollachi, Kangeyam, Vellore, Thanjavur, and Madurai APMC markets.
+- **Golden Seller Certification**: Visual trust verification badges awarded to farms consistently supplying $>95\%$ Grade A lots.
+
+### 💳 Module E: 7-Day Escrow Fintech & Payment Integration
+- **Automated 7-Day Escrow Hold Vault**: When a commercial buyer purchases a certified lot, 100% of the funds are locked in secure platform escrow, eliminating farmer payment default risks.
+- **7-Day Inspection Buffer**: The buyer receives a mandatory 7-day physical inspection window post-delivery at their drying yard or extraction facility.
+- **Automated Direct Bank Payouts**: If no dispute is logged within 7 days, the Escrow Vault triggers an automated settlement directly into the farmer's linked bank account via Razorpay/banking rails.
+- **Dispute Lockout & Freeze**: If a quality mismatch or transit damage is reported within 7 days, escrow payouts are immediately frozen, and a formal docket is dispatched to the Vercel Admin Console for arbitration.
+- **Digital Gate Pass & Bills of Lading**: Generates PDF/printable gate passes and transit receipts (`PhysicalReceipt.jsx`) complete with batch QR codes and tax breakdowns.
+
+### 💻 Module F: Enterprise Admin Web Console (Live on Vercel)
+- **Live Vercel Production Deployment**: Hosted at **[https://temporary-rapid-timpani-kicvzzs.vercel.app](https://temporary-rapid-timpani-kicvzzs.vercel.app)**, sharing the same unified AWS Amplify Gen 2 serverless backend as the mobile client.
+- **Executive Telemetry & Revenue Dashboard (`/admin/dashboard`)**:
+  - Live metric widgets (`TotalRevenueCard.jsx`, `ImpressionsCard.jsx`, `UserInsightCard.jsx`, `StatCard.jsx`).
+  - Real-time gross merchandise value (GMV), active transaction counts, and weekly scan volume telemetry.
+- **Master Scan Reports Registry (`/admin/scan-reports`)**:
+  - Searchable, filterable ledger (`ScanReportsTable.jsx`) indexing every certified multimodal scan across all mobile users.
+  - Granular inspections of AI confidence scores, shell integrity indices, and acoustic resonant frequencies ($f_0$).
+- **Chief Inspector Quality Override Engine (`/admin/quality-override`)**:
+  - Authorizes certified agricultural officers to review disputed scans, examine evidence, and manually adjust/override automated AI classifications.
+- **7-Day Escrow Dispute Mediation Console (`/admin/disputes`)**:
+  - Dedicated dispute docket interface reviewing frozen payments, buyer claims, farmer dispatch records, and assigning field arbitrators.
+- **Trade Monitor & Order Flow (`/admin/trade-monitor`)**:
+  - Real-time audit of B2B transactions (`TradeLogList.jsx`), transit milestones, and digital gate pass validations.
+- **Payment & Payout Control Room (`/admin/payments`)**:
+  - Oversees active escrow holds, pending settlements, direct bank disbursements, and refund trajectories.
+- **Integrated Live Support Desk (`/admin/support`)**:
+  - Multi-channel support desk (`SupportDesk.jsx`, `SupportTicketList.jsx`, `SupportChatPanel.jsx`) providing live assistance to farmers and commercial buyers.
+- **User Directory & Golden Seller Verification (`/admin/users`)**:
+  - Multi-role directory (`UsersTable.jsx`, `UserDetailModal.jsx`) managing role elevations (Farmer, Buyer, Inspector, Admin) and awarding Golden Seller trust badges.
+- **Public Play Store Compliance Routes**:
+  - Dedicated standalone routes required for Google Play Store & Apple App Store review:
+    - `/privacy` (`PublicPrivacyPolicy.jsx`)
+    - `/terms` (`PublicTermsOfService.jsx`)
+    - `/account-deletion` (`PublicAccountDeletion.jsx` — self-service user data & account deletion).
+
+---
+
+## 3. System Architecture & Tech Stack
 
 ```mermaid
 flowchart TD
-    subgraph MultiModalSensors ["📡 Multimodal Field Ingestion Layer"]
-        ImgCapture["📸 High-Res Camera Capture\n(Macro Shell & Calyx Focus)"]
-        VidCapture["🎥 30fps Continuous Video Stream\n(Conveyor & Sorting Table Mode)"]
-        AudioCapture["🎙️ Microphone Sensor Stream\n(Tapping Acoustic Resonance)"]
+    subgraph ClientLayer ["📱 Mobile Client (React 19 + Capacitor Android/iOS)"]
+        GuestMode["⚡ Zero-Barrier Guest Scanner\n(20 Free Scans • No Auth)"]
+        MultimodalEngine["📸 Vision • 🎥 Video • 🎙️ Acoustic DSP\n(TensorFlow Lite INT8)"]
+        PrivateSandbox[("🔒 Device-Only Private Media Vault\n(Raw Pics NEVER Leave Phone)")]
+        ReportGen["Structured JSON Report Generator"]
+        OfflineSyncQueue[("Offline Delta Sync Queue (SQLite)")]
     end
 
-    subgraph OnDeviceEngine ["⚙️ 100% On-Device Offline Neural Pipeline (TFLite INT8)"]
-        direction TB
-        subgraph VisionModel ["👁️ Computer Vision Pipeline"]
-            Preprocessor["Image Normalization & Bilinear Resize (224x224)"]
-            MobileNetV3["Custom MobileNetV3 INT8 Quantized CNN"]
-            VisualClassifier{"Defect Classifier:\n• Grade A (Export Quality)\n• Grade B (Market Standard)\n• Reject (Fungal / Cracked)"}
-        end
-
-        subgraph AudioModel ["🔊 Acoustic Resonance Spectrometry"]
-            AudioDSP["Fast Fourier Transform (FFT) & Mel-Spectrogram Extract"]
-            AcousticCNN["1D-CNN Acoustic Resonance Neural Model"]
-            WaterDensityClassifier{"Water & Kernel Density Estimator:\n• Full Water (Optimal Sweetness)\n• Partial Water (Mature Copra)\n• Dry / Desiccated / Spoiled"}
-        end
-
-        ConfidenceFusion["🔀 Multimodal Confidence Fusion Matrix"]
+    subgraph AWSCloud ["☁️ AWS Amplify Gen 2 Serverless Cloud"]
+        CognitoPools["Amazon Cognito Multi-Role Auth\n(Farmer / Buyer / Admin RBAC)"]
+        AppSyncAPI["AWS AppSync GraphQL API\n(Real-Time WebSockets)"]
+        DynamoDB[("Amazon DynamoDB\n(Scan Reports, Orders, Escrow)")]
+        S3Storage[("Amazon S3\n(Encrypted Dispute Evidence Only)")]
     end
 
-    subgraph PrivacySandbox ["🔒 Private Local Storage & Report-Only Enclave"]
-        LocalMedia["Device-Only Sandboxed Media Vault\n(Raw Images & Video NEVER Uploaded)"]
-        AuditReportGen["Structured JSON Report Generator\n(Grade, Confidence, Defect %%, Hash)"]
-        OfflineQueue[("Offline SQLite Sync Queue")]
+    subgraph EscrowAndAdmin ["💳 Escrow & Enterprise Console"]
+        EscrowEngine["7-Day Payment Hold Escrow Vault\n(Automatic Farmer Payouts)"]
+        VercelAdmin["💻 React 19 Enterprise Admin Console\n(Geospatial Map & Dispute Moderation)"]
     end
 
-    subgraph AWSCloudEcosystem ["☁️ AWS Cloud & Marketplace Infrastructure"]
-        CognitoAuth["Amazon Cognito RBAC\n(Farmer / Buyer / Admin)"]
-        AppSyncCore["AWS AppSync GraphQL API"]
-        DynamoDBStore[("Amazon DynamoDB\n(Scan Reports & Order Ledgers)")]
-        AdminWebPortal["React 19 Enterprise Admin Console (Vercel)"]
-    end
+    GuestMode --> MultimodalEngine
+    MultimodalEngine --> PrivateSandbox
+    MultimodalEngine -->|"Certified Grade (<120ms)"| ReportGen
+    ReportGen -->|"Report Metadata Only"| OfflineSyncQueue
 
-    subgraph EscrowFintechEngine ["💳 7-Day Escrow & Dispute Resolution Engine"]
-        EscrowHold["7-Day Payment Hold Vault"]
-        DisputeEscalation{"Quality Dispute Protocol:\n• 7-Day Buyer Inspection Window\n• Quality Mismatch Freeze\n• Field Arbitrator Intervention"}
-        BankPayout["Automated Direct Bank Transfer (Payout Release)"]
-    end
+    OfflineSyncQueue <-->|"Auto-Sync via Amplify Client"| AppSyncAPI
+    AppSyncAPI <--> CognitoPools
+    AppSyncAPI <--> DynamoDB
+    AppSyncAPI <-->|"GraphQL Subscriptions"| VercelAdmin
 
-    ImgCapture --> Preprocessor --> MobileNetV3 --> VisualClassifier
-    VidCapture --> Preprocessor
-    AudioCapture --> AudioDSP --> AcousticCNN --> WaterDensityClassifier
+    DynamoDB --> EscrowEngine
+    EscrowEngine -->|"7 Days Pass (No Dispute)"| Payout["Direct Bank Payout Release"]
+    EscrowEngine -->|"Quality Dispute Raised"| VercelAdmin
+```
 
-    VisualClassifier --> ConfidenceFusion
-    WaterDensityClassifier --> ConfidenceFusion
+| Layer | Technologies & Libraries | Architectural Purpose |
+|---|---|---|
+| **Mobile Frontend** | React 19, TypeScript, Vite, Tailwind CSS | High-performance mobile client with 60fps view transitions. |
+| **Native Runtime** | Capacitor (Android & iOS) | Native Camera2 API, AudioRecord buffer, and local filesystem bridges. |
+| **Edge AI Engine** | TensorFlow Lite (INT8 Quantized), Android NNAPI | 100% offline multimodal neural network execution (Vision + Audio). |
+| **Cloud Framework** | AWS Amplify Gen 2 | Declarative serverless infrastructure-as-code. |
+| **API & Real-Time** | AWS AppSync (GraphQL) | Real-time WebSocket subscriptions and offline delta synchronization. |
+| **Database** | Amazon DynamoDB | NoSQL high-throughput storage for scan reports and B2B orders. |
+| **Object Storage** | Amazon S3 | Secure evidentiary dispute photography storage via signed URLs. |
+| **Auth & Security** | Amazon Cognito User & Identity Pools | JWT-based multi-role separation (Farmer, Buyer, Admin). |
+| **Admin Web Console** | React 19, Vercel | Real-time map telemetry, dispute arbitration, and user management. |
 
-    ConfidenceFusion -->|"Instant Certified Grade (<120ms, Zero Internet)"| AuditReportGen
-    
-    ImgCapture & VidCapture -.->|"Stored Locally Only (Privacy Preserved)"| LocalMedia
-    AuditReportGen -->|"Report Metadata Only (Zero Raw Pics)"| OfflineQueue
+---
 
-    OfflineQueue <-->|"Auto-Sync on Connectivity Resumption"| AppSyncCore
-    AppSyncCore <--> CognitoAuth
-    AppSyncCore <--> DynamoDBStore
-    AppSyncCore <-->|"Real-Time wss:// Telemetry"| AdminWebPortal
+## 4. Complete Folder Structure
 
-    DynamoDBStore --> EscrowHold
-    EscrowHold --> DisputeEscalation
-    DisputeEscalation -->|"No Dispute within 7 Days"| BankPayout
-    DisputeEscalation -->|"Quality Mismatch Raised"| AdminWebPortal
+```
+pooja-scans-app/
+├── amplify/                              # AWS Amplify Gen 2 Backend Infrastructure
+│   ├── auth/                             # Amazon Cognito User Pool & Role definitions
+│   ├── data/                             # DynamoDB schema & AppSync GraphQL models
+│   └── storage/                          # Amazon S3 bucket policies & secure access rules
+├── android/                              # Capacitor Android Native Project
+│   ├── app/src/main/assets/              # Bundled TFLite models (Vision & Audio CNN)
+│   └── app/src/main/java/                # Custom native audio & camera plugins
+├── public/                               # Static production assets & PWA manifest
+├── src/                                  # React 19 Application Source Code
+│   ├── assets/                           # Agricultural iconography, logos, audio test samples
+│   ├── components/                       # Modular UI Components
+│   │   ├── admin/                        # Dispute review dockets & user approval tables
+│   │   ├── buyer/                        # Order cards, filter drawers, bargain modals
+│   │   ├── chat/                         # Real-time WebSocket messaging UI
+│   │   ├── common/                       # Navigation bars, toasts, loaders, modals
+│   │   ├── guest/                        # 20-free-scan counters & zero-login dashboards
+│   │   ├── marketplace/                  # B2B product cards & mandi price trackers
+│   │   ├── negotiation/                  # Counter-offer sliders & agreement triggers
+│   │   ├── payment/                      # 7-day escrow status & payment gateway forms
+│   │   └── scan/                         # Camera viewfinder, video HUD & acoustic mic meters
+│   ├── context/                          # Global React state (Auth, Toast, NetworkStatus)
+│   ├── graphql/                          # Auto-generated GraphQL queries, mutations, subscriptions
+│   ├── hooks/                            # Custom React Hooks
+│   │   ├── useNetworkStatus.js           # Offline / Online network watcher
+│   │   ├── usePermissions.js             # Camera & microphone permission manager
+│   │   └── useSafeBack.js                # Hardware back-button exit guard
+│   ├── pages/                            # Application View Routes
+│   │   ├── buyer/                        # Buyer Home, Marketplace, Tracking, Receipts
+│   │   ├── common/                       # GuestDashboard, Permissions, Onboarding
+│   │   ├── seller/                       # SellerHome, AddBatch, Orders, Payouts, Earnings
+│   │   └── ScanFlow.jsx                  # Unified Multimodal Scanning Interface
+│   ├── routes/                           # HashRouter route configuration & auth guards
+│   ├── services/                         # Core Business Logic & Native Bridges
+│   │   ├── awsService.js                 # AppSync & DynamoDB integration layer
+│   │   ├── deviceSessionService.js       # Local guest session & 20-free-scan tracker
+│   │   ├── offlineQueueService.js        # SQLite offline transaction sync queue
+│   │   └── paymentService.js             # Escrow milestone & Razorpay payment bindings
+│   ├── utils/                            # Audio FFT parsers, image compressors, geohashers
+│   ├── App.jsx                           # Application root with hardware back-button listener
+│   └── main.jsx                          # React 19 DOM bootstrap
+├── capacitor.config.json                 # Capacitor app ID, plugins, and splash screen configuration
+├── package.json                          # Dependencies & NPM build scripts
+└── vite.config.js                        # Vite bundler configuration & PWA worker build
 ```
 
 ---
 
-## 🔬 Deep Breakdown: The 3 Modalities of Offline AI
+## 5. Screen / Route & API Inventory
 
-### 1. 📸 High-Resolution Computer Vision (Static Image Mode)
-- **Model Topology**: Custom MobileNetV3-Large architecture, transfer-learned on agricultural datasets and converted via TensorFlow Lite post-training integer quantization (PTQ INT8).
-- **Inference Speed**: ~85ms on mid-range Android processors (Snapdragon 680 / MediaTek Helio G88).
-- **Smart On-Device Image Compression Engine**:
-  - High-resolution raw camera frames (typically 5MB–15MB from 12MP/48MP smartphone sensors) are **automatically compressed on-device to $<120\text{ KB}$** using adaptive WebP/JPEG quantization and bilinear scaling before inference.
-  - Preserves critical high-frequency gradient edges required to detect micro-cracks and fungal mycelium while keeping local app storage ultra-compact (under 50MB for thousands of scans).
-- **Inspection Targets**:
-  - **Shell Integrity**: Sub-millimeter stress cracks, mechanical damage incurred during dehusking.
-  - **Fungal Pathogen Screening**: Automated segmentation of white/black mold (*Aspergillus niger*, *Fusarium*) around the soft germination eye.
-  - **Dimensional Grading**: Automatically estimates nut diameter and circumference ratio using reference contours.
+### Major Application Screens & Routes
 
-### 2. 🎥 Continuous Conveyor Video Stream (Sorting Bay Mode)
-- **Operation**: Designed for wholesale aggregating yards and sorting tables processing thousands of units per hour.
-- **30 FPS Processing**: Utilizes lightweight single-shot detection (SSD-MobileNet) tracking coconuts moving along conveyor belts.
-- **Throughput Telemetry**: Real-time batch counter (e.g., 140 nuts/min) tallying Grade A, Grade B, and Rejects, triggering visual alerts and sorting solenoids.
+| Route | Component | Target Role | Primary Purpose |
+|---|---|---|---|
+| `/guest-dashboard` | `GuestDashboard.jsx` | Guest / Any | **Zero-login home** displaying remaining free scans and quick-scan triggers. |
+| `/scan` | `ScanFlow.jsx` | Any | Unified **Image, 30fps Video, and Acoustic Audio** scanning canvas. |
+| `/quality-report` | `QualityReport.jsx` | Any | Composite quality rating card with defect breakdowns and local export. |
+| `/home` | `buyer/Home.jsx` | Buyer | Authenticated buyer hub with recent market orders and mandi rates. |
+| `/market` | `buyer/Marketplace.jsx` | Buyer | Wholesale lot browser with geo-proximity and quality grade filters. |
+| `/bargain/:id` | `buyer/BuyerBargainPage.jsx` | Buyer | Real-time price negotiation and counter-offer proposal interface. |
+| `/order-tracking` | `buyer/OrderTracking.jsx` | Buyer | Real-time transit milestone viewer with 7-day inspection timer. |
+| `/seller/home` | `seller/SellerHome.jsx` | Seller | Farmer dashboard showing active batch listings and incoming bids. |
+| `/seller/add-batch` | `seller/SellerAddBatch.jsx` | Seller | 1-Click conversion of an AI scan certificate into a wholesale listing. |
+| `/seller/payouts` | `seller/Payouts.jsx` | Seller | 7-day escrow hold status and direct bank account payout ledger. |
 
-### 3. 🎙️ Acoustic Resonance Analysis (Tapping Audio Mode)
-- **The Agronomic Breakthrough**: Traditional experienced sorters "knuckle-tap" or coin-tap coconuts to hear internal pitch. Pooja Scan AI digitizes and standardizes this psychoacoustic phenomenon.
-- **Digital Signal Processing (DSP)**:
-  - Microphone records a 1.5-second audio window of tapping impacts.
-  - Noise reduction filters strip ambient plantation wind, bird calls, and human speech.
-  - Computes **Fast Fourier Transform (FFT)** to generate a 128-band Mel-frequency spectrogram.
-- **Acoustic Inference**:
-  - A 1D-CNN classifies the fundamental resonant frequency ($f_0$) and decay damping constant ($\tau$).
-  - **High-frequency ring ($450\text{--}600\text{ Hz}$)**: Signals a dense, water-filled cavity with high turgor pressure.
-  - **Dull low-frequency thud ($<300\text{ Hz}$)**: Identifies desiccated, empty, or spoiled internal endosperm without cracking the shell.
+### Enterprise Admin Web Console Routes (Vercel Deployed)
 
----
+| Route | Component | Access Role | Operational Purpose |
+|---|---|---|---|
+| `/admin/login` | `AdminLogin.jsx` | Super Admin / Inspector | Secure administrative gateway with session expiry guards. |
+| `/admin/dashboard` | `AdminDashboard.jsx` | Admin | Real-time GMV, active users, weekly scan charts & revenue metrics. |
+| `/admin/scan-reports` | `ScanReportsPage.jsx` | Inspector / Admin | Complete searchable ledger of certified scans with acoustic & visual scores. |
+| `/admin/quality-override` | `AdminQualityOverride.jsx` | Chief Inspector | Manual review and override interface for flagged or disputed lots. |
+| `/admin/disputes` | `Disputes.jsx` | Arbitrator / Admin | **7-Day Escrow Dispute Mediation** console to review claims and freeze/release funds. |
+| `/admin/trade-monitor` | `TradeMonitor.jsx` | Operations | Real-time tracking of active marketplace contracts and digital gate passes. |
+| `/admin/payments` | `AdminPayments.jsx` | Finance | Escrow hold monitoring, automated bank disbursements, and refund processing. |
+| `/admin/users` | `UserDirectory.jsx` | Admin | User database, role modifications, and Golden Seller badge approvals. |
+| `/admin/support` | `SupportDesk.jsx` | Support Team | Live customer support chat and ticket handling for farmers/buyers. |
+| `/privacy` | `PublicLegalPages.jsx` | Public | Google Play / App Store mandatory privacy disclosures. |
+| `/terms` | `PublicLegalPages.jsx` | Public | B2B marketplace trading terms and escrow conditions. |
+| `/account-deletion` | `PublicLegalPages.jsx` | Public | Self-service user account and data deletion compliant with DPDP & GDPR. |
 
-## 🔒 Strict Privacy-by-Design: Report-Only Cloud Sync
+### Core GraphQL Operations & Database Models
 
-Unlike consumer apps that harvest camera rolls, Pooja Coconut Scan AI is engineered with a **zero-image-leak privacy architecture**:
+```graphql
+# Primary Data Models in AWS AppSync / DynamoDB
+type ScanReport @model @auth(rules: [{ allow: owner }, { allow: groups, groups: ["Admins"] }]) {
+  id: ID!
+  farmerId: String!
+  compositeGrade: String! # GRADE_A, GRADE_B, REJECT
+  shellIntegrityScore: Float!
+  fungalRisk: String!
+  acousticFrequencyHz: Float!
+  waterVolumeEstimate: String!
+  geoHash: String!
+  localImageHash: String!
+  createdAt: AWSDateTime!
+}
 
-- **Zero Camera Photos Stored on Server**: Raw captured images, high-speed video frames, and ambient microphone recordings **NEVER leave the farmer's mobile device**.
-- **Bandwidth & Privacy Protection**: Rural plantations often face expensive 2G/3G data rates. Uploading hundreds of high-resolution images is impractical and invasive.
-- **Cryptographic Audit Reports**: Only structured numerical metadata is uploaded to AWS DynamoDB:
-  ```json
-  {
-    "scanId": "SCAN-2026-TN-9812A",
-    "timestamp": "2026-11-15T09:12:00Z",
-    "farmerId": "FARMER-POLLACHI-402",
-    "compositeGrade": "GRADE_A",
-    "metrics": {
-      "shellIntegrityConfidence": 0.984,
-      "fungalRisk": "NONE_DETECTED",
-      "acousticResonanceHz": 524,
-      "waterVolumeEstimate": "FULL_WATER",
-      "copraThicknessIndex": 0.92
-    },
-    "geoHash": "tcb0x7q",
-    "localImageSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  }
-  ```
-- **Dispute-Only Evidence Verification**: Raw images remain securely in on-device sandboxed storage, transmitted to cloud storage only if a formal dispute escalation is initiated.
+type MarketplaceListing @model @auth(rules: [{ allow: owner }, { allow: private, operations: [read] }]) {
+  id: ID!
+  sellerId: String!
+  lotVolumeNuts: Int!
+  weightMetricTonnes: Float!
+  basePricePerNut: Float!
+  grade: String!
+  locationCity: String!
+  escrowStatus: String! # AVAILABLE, LOCKED_IN_ESCROW, SETTLED
+}
 
----
-
-## 💳 7-Day Payment Hold Escrow & Quality Dispute Resolution
-
-To eliminate fraud, payment defaults, and arbitrary post-delivery price reductions, the B2B marketplace enforces an automated **7-Day Escrow Protection Protocol**:
-
-| Stage | Timeline | Operational & Financial Action |
-|---|---|---|
-| **1. Order & Escrow Funding** | Day 0 | Buyer places order against AI-certified lot. Full transaction value is locked in the platform's secure Escrow Vault. |
-| **2. Dispatch & Transit** | Days 1–3 | Farmer dispatches lot with digital gate pass and QR-coded batch certificate. |
-| **3. Delivery & Inspection Window** | Days 3–7 | Buyer receives batch at warehouse and has a **mandatory 7-day inspection window** to verify physical condition. |
-| **4. Automatic Settlement** | Day 7 (End) | If no discrepancy is raised, the Escrow Vault **automatically releases 100% of funds** to the farmer's linked bank account. |
-| **5. Escalation Protocol (Dispute)** | Within 7 Days | If buyer claims quality mismatch or transit damage, **payment is instantly frozen**. A formal dispute ticket routes to the Vercel Admin Console, assigning a certified third-party field arbitrator to inspect the lot. |
-
----
-
-## 🎁 Freemium Growth Engine & Zero-Barrier Guest Scanning
-
-To remove all friction for rural farmers, agricultural laborers, and daily consumers:
-
-### 1. ⚡ Instant Scanning Without Login (Zero-Barrier Guest Mode)
-- **Zero Signup Requirement**: Anyone can download the app and **immediately start scanning coconuts without creating an account, entering an email, or waiting for an OTP**.
-- **100% Offline Standalone Utility**: The on-device TensorFlow Lite computer vision and acoustic resonance analyzer run instantly out-of-the-box.
-- **20 Free Trial Scans**: Every guest device receives **20 complimentary full multimodal scans** locally tracked on-device.
-- **Decoupled Architecture**: Users who only need quick quality testing or defect detection can use the app indefinitely as a lightweight utility without ever touching the commercial marketplace.
-
-### 2. 🔐 Seamless Upgrade to B2B Commerce
-- Users only authenticate (via Amazon Cognito) when they decide to **list produce for sale, place wholesale bids, communicate with traders, or receive escrow bank payouts**.
-
----
-
-## 🛒 B2B Agricultural Marketplace: Verified Seller & Buyer Trading Hub
-
-The platform seamlessly bridges agricultural supply with commercial industrial demand, enabling farmers and buyers to transact with complete quality transparency.
-
-```mermaid
-flowchart LR
-    subgraph SellerEcosystem ["🌾 Verified Sellers (Farmers & Aggregators)"]
-        ScanAudit["AI Certified Lot Scan"]
-        CreateListing["1-Click B2B Listing Creation\n(Grade, Weight, Location, Price)"]
-        SellerOrders["Seller Dashboard & Dispatch Transit"]
-    end
-
-    subgraph CommerceHub ["🏛️ Central B2B Marketplace Hub"]
-        GeoSearch["Geo-Proximity & Quality Filters\n(Grade A Export / Within 50km)"]
-        LiveMandiRates["Live APMC Mandi Benchmark Prices\n(Pollachi, Kangeyam, Thanjavur)"]
-        EscrowEngine["7-Day Payment Hold Escrow Vault"]
-    end
-
-    subgraph BuyerEcosystem ["🏭 Wholesale Buyers (Millers & Exporters)"]
-        BrowseLots["Browse Verified Batches\n(Inspect AI Quality Scorecard)"]
-        EscrowDeposit["1-Click Purchase & Escrow Deposit"]
-        InspectionDelivery["7-Day Warehouse Inspection Window"]
-    end
-
-    ScanAudit --> CreateListing --> GeoSearch
-    LiveMandiRates -.-> CreateListing & BrowseLots
-    BrowseLots --> EscrowDeposit --> EscrowEngine
-    EscrowEngine --> SellerOrders --> InspectionDelivery
-    InspectionDelivery -->|"Quality Approved (Day 7)"| EscrowEngine
+type OrderEscrow @model @auth(rules: [{ allow: owner }, { allow: groups, groups: ["Admins"] }]) {
+  id: ID!
+  listingId: String!
+  buyerId: String!
+  sellerId: String!
+  amountINR: Float!
+  escrowState: String! # HELD_IN_ESCROW, DISPUTED, RELEASED_TO_FARMER
+  inspectionDeadline: AWSDateTime! # 7-day timestamp
+}
 ```
 
-### 👨‍🌾 1. For Sellers (Farmers, FPOs & Aggregators)
-- **1-Click Listing Creation**: Turn any certified multimodal scan report into a public B2B marketplace listing with lot volume (number of nuts or metric tonnes), location, and base price.
-- **Direct-to-Buyer Elimination of Middlemen**: Connect directly with commercial coconut oil extractors, copra processors, and national retail buyers.
-- **Guaranteed Payment Security**: Sellers dispatch harvests knowing that 100% of the lot's value is already deposited and locked in the platform's secure Escrow Vault.
-
-### 🏢 2. For Buyers (Copra Processors, Oil Refineries & Exporters)
-- **Cryptographic Quality Assurance**: Inspect detailed AI certificates (shell crack index, fungal risk, acoustic water volume estimate) before placing bids or funding escrow.
-- **Geo-Proximity Filtering**: Find bulk coconut lots within driving distance across Tamil Nadu & Kerala to minimize freight and transit shrinkage.
-- **7-Day Inspection Protection**: Receive and verify lots physically at the warehouse with the security of a 7-day payment freeze if delivered quality deviates from the AI certificate.
-
 ---
 
-## 📊 Dataset Engineering & Model Training Lifecycle
+## 6. Getting Started (Local Setup & Installation)
 
-| Dataset Category | Scale / Scope | Collection Protocols & Diversity |
-|---|---|---|
-| **High-Res Images** | 25,000+ Annotated Specimens | Sourced across 4 distinct agro-climatic zones in Tamil Nadu & Kerala. Captured under direct sunlight, overcast rain, artificial warehouse sodium lamps, and ambient dusk. |
-| **Acoustic Audio Samples** | 8,500+ Calibrated Tapping Recordings | Captured using studio-grade omnidirectional microphones and mobile onboard MEMS sensors across diverse nut sizes and drying durations. |
-| **Ground Truth Validation** | Destructive Physical Lab Audits | Every specimen in the training dataset was physically cracked, weighed, and laboratory-tested for water volume, shell thickness, and copra oil percentage. |
+### Prerequisites
+- **Node.js**: v18.0.0 or higher (v20+ recommended).
+- **Package Manager**: `npm` (v9+) or `yarn`.
+- **Android Development**: Android Studio Iguana / Jellyfish with Android SDK Platform 34 and Java JDK 17.
+- **AWS CLI**: Configured with appropriate Amplify Gen 2 permissions.
 
-- **Training Stack**: PyTorch, TensorFlow 2.16, CUDA 12, Albumentations (geometric transforms, shadow injection, lens blur simulation).
-- **Quantization & Benchmarking**:
-  - Baseline FP32 Model: 34.2 MB (too heavy for budget farm phones).
-  - INT8 Quantized Edge Model: **4.8 MB** (86% reduction with only 0.4% loss in accuracy).
-  - Evaluated Validation Accuracy: **96.8% multi-class accuracy**.
+### 1. Clone Repository
+```bash
+git clone https://github.com/rahaman1721/pooja-coconut-scan-ai.git
+cd pooja-coconut-scan-ai
+```
 
----
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-## 🛠️ Complete Technology Stack
+### 3. Configure Local Environment
+Create a `.env` file in the project root:
+```env
+VITE_APP_ENV=development
+VITE_AWS_REGION=ap-south-1
+VITE_ENABLE_MOCK_INFERENCE=false
+```
 
-| Layer | Technology | Purpose & Implementation |
-|---|---|---|
-| **Mobile Application** | React 19, TypeScript, Vite, Tailwind CSS | Modular cross-platform mobile frontend with sub-100ms UI transitions. |
-| **Mobile Native Bridge** | Capacitor (Android & iOS) | Native hardware access to Camera2 API, AudioRecord buffer, and Filesystem. |
-| **Edge AI Engine** | TensorFlow Lite (INT8 Quantized), NNAPI Delegate | Hardware-accelerated on-device neural execution (Vision + Audio DSP). |
-| **Cloud Backend** | AWS Amplify Gen 2 | Infrastructure-as-code serverless backend definition. |
-| **API & Realtime** | AWS AppSync (GraphQL) | Real-time market subscriptions and offline conflict resolution. |
-| **Database** | Amazon DynamoDB | High-throughput NoSQL storage for structured scan reports and order ledgers. |
-| **Identity & Security** | Amazon Cognito User & Identity Pools | JWT-gated role separation and IAM least-privilege policies. |
-| **Fintech Escrow** | Escrow payment integration | 7-day payment hold, milestone releases, and dispute lockouts. |
-| **Admin Web Console** | React 19, Vercel | Standalone enterprise management console for marketplace operators. |
+### 4. Run Development Server (Web Sandbox)
+```bash
+npm run dev
+```
+Open **[http://localhost:5173](http://localhost:5173)** in your browser.
 
----
+### 5. Build & Sync with Android
+```bash
+# Build production web bundle
+npm run build
 
-## 👨‍💻 My Role & Engineering Ownership
+# Sync assets and native plugins to Android container
+npx cap sync android
 
-As **Lead Mobile Architect & Full-Stack AI Engineer**:
-- Conceptualized and designed the complete product UX/UI in Figma, focusing on zero-literacy visual cues for rural farmers.
-- Led the multimodal dataset collection and trained the deep learning computer vision and acoustic resonance models.
-- Quantized and embedded TensorFlow Lite models into the Capacitor Android container, achieving sub-120ms offline latency.
-- Engineered the **Privacy-by-Design report-only storage architecture**, guaranteeing farmer camera imagery never leaves local devices.
-- Implemented the **7-day payment hold escrow engine** and **20 free scan onboarding credit lifecycle**.
-- Built the standalone React 19 Admin Web Console deployed to Vercel, integrating live map visualizations and quality moderation controls.
+# Open project in Android Studio for APK compilation
+npx cap open android
+```
 
 ---
 
 <div align="center">
-  <sub>Pioneering multimodal agricultural AI for rural empowerment · Built by <a href="https://rahaman1721.framer.website">Obaidhur Rahaman</a> © 2026</sub>
+  <sub>Pioneering multimodal edge AI for agricultural empowerment · Designed & Built by <a href="https://rahaman1721.framer.website">Obaidhur Rahaman</a> © 2026</sub>
 </div>
