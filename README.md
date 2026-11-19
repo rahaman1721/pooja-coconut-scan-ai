@@ -29,6 +29,19 @@ Architected & Engineered by **[Obaidhur Rahaman](https://rahaman1721.framer.webs
 | **Android APK** | [⬇️ Download Production Release v1.0.0](https://github.com/rahaman1721/pooja-coconut-scan-ai/releases/tag/v1.0.0) | Complete 24.56 MB signed Android APK package with bundled TFLite delegates and offline DSP pipelines. |
 | **Admin Web Console** | [🌐 Live Enterprise Dashboard](https://temporary-rapid-timpani-kicvzzs.vercel.app) | Real-time scan telemetry, user geospatial mapping, quality dispute moderation & market trends. |
 
+<div align="center">
+  <br/>
+  <h3>🥥 Production Edge AI & Marketplace Platform Walkthrough</h3>
+  <p><sub>On-Device Multimodal AI Grading (Vision • Acoustic Audio • Ripeness Telemetry)</sub></p>
+  <br/>
+  <p align="center">
+    <img src="docs/screenshots/01-ai-grading-inference.png" alt="AI Coconut Grading Telemetry" width="250" style="border-radius: 14px; margin: 4px;" />
+    <img src="docs/screenshots/02-internal-defects-scan.png" alt="Internal Copra Defect Scan" width="250" style="border-radius: 14px; margin: 4px;" />
+    <img src="docs/screenshots/03-farm-marketplace-b2b.png" alt="Direct B2B Farm Marketplace" width="250" style="border-radius: 14px; margin: 4px;" />
+  </p>
+  <br/>
+</div>
+
 ---
 
 ## 1. Project Title, Badges & Vision
